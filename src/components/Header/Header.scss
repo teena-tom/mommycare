@@ -1,0 +1,23 @@
+@use "./../../styles/partials/colors" as *;
+@use "./../../styles/partials/mixins" as *;
+@use "./../../styles/partials/topography" as *;
+
+.header {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $primary-text-color-header-ivory;
+  background-color: $primary-header-color-dim_grey;
+  @include tablet {
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @include desktop {
+    padding: 24px;
+  }
+}

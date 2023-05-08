@@ -1,11 +1,16 @@
 @font-face{
-    font-family: 'Avenir';
-    src: url("./../../Assets/Font/Alternative/AvenirNextLTProBold.ttf") format("Avenir");
-        font-weight: bold;
+    font-family: 'Sen';
+    src: url("./../../assets/Font/Sen-ExtraBold.ttf") format("Sen");
+        font-weight: extra bold;
 }
 
 @font-face {
-    font-family: 'Avenir';
-    src: url("./../../Assets/Font/Alternative//AvenirNextLTPro.ttf") format('Avenir');
+    font-family: 'Sen';
+    src: url("./../../assets/Font/Sen-Bold.ttf") format('Sen');
+    font-weight: Bold;
+}
+@font-face {
+    font-family: 'Sen';
+    src: url("./../../assets/Font/Sen-Regular.ttf") format('Sen');
     font-weight: normal;
 }
