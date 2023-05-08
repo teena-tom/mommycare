@@ -11,3 +11,16 @@
       @content;
     }
   }
+  @mixin tablet__tables-buttons {
+    font-family: "Sen";
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+  @mixin mobile__tables-buttons {
+    font-family: "Sen";
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+  

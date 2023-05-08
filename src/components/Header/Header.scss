@@ -20,4 +20,61 @@
   @include desktop {
     padding: 24px;
   }
+  &__logo{
+    width: 3rem;
+    height: auto;
+  }
+  &__left {
+    @include tablet {
+      display: flex;
+    }
+  }
+  &__right {
+    display: flex;
+    padding: 1rem 3rem;
+    @include tablet {
+      display: flex;
+      padding: 0 3rem;
+    }
+  }
+  &__button {
+    border-radius: 20px;
+    border: none;
+    padding: 1rem 3rem;
+    display: flex;
+    background-color: $primary-header-color-dim_grey;
+    color: $primary-text-color-header-ivory;
+    text-decoration: none;
+    @include mobile__tables-buttons;
+    &:active {
+      background-color: $active-button-color;
+      color: $primary-text-color-on_hover;
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $primary-text-color-on_hover;
+    }
+
+    @include tablet {
+      padding: 1rem 2rem;
+      @include tablet__tables-buttons;
+    }
+  }
+  &__daycares {
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    @include tablet {
+      padding: 0 3rem;
+    }
+  }
+  &__children {
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    @include tablet {
+      padding-right: 0;
+    }
+  }
 }

@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Hlogo from "./../../assets/icons/home-logo.png";
 import "./Header.scss";
 
 function Header() {
@@ -7,8 +8,7 @@ function Header() {
       <div className="header__left">
         <NavLink to="/">
           {" "}
-          Home
-          {/* <img className="header__logo" src={Tlogo} alt="logo"></img> */}
+          <img className="header__logo" src={Hlogo} alt="logo"></img>
         </NavLink>
       </div>
       <div className="header__right">
@@ -22,7 +22,7 @@ function Header() {
         <div className="header__children">
           {" "}
           <NavLink to="/children" className="header__button">
-            Children
+            Parents
           </NavLink>
         </div>
       </div>
