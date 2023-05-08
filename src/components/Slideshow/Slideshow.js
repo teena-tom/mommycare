@@ -1,48 +1,54 @@
-import './Slideshow.scss';
-import {Link} from "react-router-dom";
-import img1 from'./../../assets/images/daycare-images1.jpg';
-import img2 from'./../../assets/images/daycare-image2.jpg';
-import img3 from'./../../assets/images/daycare-image3.jpg';
+import "./Slideshow.scss";
+import { Link } from "react-router-dom";
+import img1 from "./../../assets/images/daycare-images1.jpg";
+import img2 from "./../../assets/images/daycare-image2.jpg";
+import img3 from "./../../assets/images/daycare-image3.jpg";
+import { useState } from "react";
 
 function Slideshow() {
-    return(
-       <div>
-        <div className="slideshow__container">
+  const slides = [<img src={img1} alt="img"></img>,
+  <img src={img2} alt="img"></img>,
+  <img src={img3} alt="img"></img>
+];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const goToPrevious = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
 
-         {/* Full-width images with number and caption text  */}
-        <div className="mySlides__fade">
-          <div class="numbertext">1 / 3</div>
-          <img src={img1} className='Image' alt='Hero_Image'></img>
-          <div class="text">Caption Text</div>
-        </div>,
-      
-        <div className="mySlides__fade">
-          <div class="numbertext">2 / 3</div>
-          <img src={img2} className='Image' alt='Hero_Image'></img>
-          <div class="text">Caption Two</div>
-        </div>,
-      
-        <div className="mySlides__fade">
-          <div class="numbertext">3 / 3</div>
-          <img src={img3} className='Image' alt='Hero_Image'></img>
-          <div class="text">Caption Three</div>
-        </div>,
-      
-         {/* Next and previous buttons  */}
-        <Link class="prev" onclick="plusSlides(-1)">&#10094;</Link>
-        <Link class="next" onclick="plusSlides(1)">&#10095;</Link>
+  const goToNext = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+  return (
+    <div className="slideshow__container">
+      Image Slider
+      <div className="slideshow__slider">
+        <div className="slideshow__leftarrow" onClick={goToPrevious}>
+          ˂
+        </div>
+        <div className="slideshow__rightarrow" onClick={goToNext}>
+          ˃
+        </div>
+        <div className="slideshow__hero"></div>
+        <div className="slideshow__dotsContainer">
+          {slides.map((slide, slideIndex) => (
+            <div
+              key={slideIndex}
+              className="slideshow__dot"
+              onClick={() => goToSlide(slideIndex)}
+            >
+              ●
+            </div>
+          ))}
+        </div>
       </div>
-     
-      
-       {/* The dots/circles  */}
-      <div className='.dots' >
-      {/* style="text-align:center" */}
-        <Link class="dot" onclick="currentSlide(1)"></Link>
-        <Link class="dot" onclick="currentSlide(2)"></Link>
-        <Link class="dot" onclick="currentSlide(3)"></Link>
-      </div>
-      </div>
-      
-    )
+    </div>
+  );
 }
 export default Slideshow;
