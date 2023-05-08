@@ -1,26 +1,41 @@
 // Breakpoints
 
 @mixin tablet {
-    @media (min-width: 768px) {
-      @content;
-    }
+  @media (min-width: 768px) {
+    @content;
   }
-  
-  @mixin desktop {
-    @media (min-width: 1280px) {
-      @content;
-    }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
   }
-  @mixin tablet__tables-buttons {
-    font-family: "Sen";
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 600;
-  }
-  @mixin mobile__tables-buttons {
-    font-family: "Sen";
-    font-size: 13px;
-    line-height: 20px;
-    font-weight: 600;
-  }
-  
+}
+
+//tablet
+@mixin tablet__tables-buttons {
+  font-family: "Sen";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+@mixin tablet__body-small {
+  font-family: "Sen";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+//mobile
+@mixin mobile__tables-buttons {
+  font-family: "Sen";
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
+}
+@mixin mobile__body-small {
+  font-family: "Sen";
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 400;
+}
