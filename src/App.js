@@ -13,8 +13,9 @@ function App() {
         <Header />
        <div className="App__body">
         <Slideshow />
-    <ChildrenDetails />
+    
        Hello
+       <ChildrenDetails />
        </div>
         
         <Footer />
