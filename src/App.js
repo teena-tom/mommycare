@@ -12,10 +12,16 @@ function App() {
       <BrowserRouter>
         <Header />
        <div className="App__body">
-        <Slideshow />
+       <Routes>
+          <Route path="/" element={<Slideshow />} />
+          {/* <Route path="/:id" element={<WarehouseItemPage />} /> */}
+          <Route path="/children" element={<ChildrenDetails />} />
+          {/* <Route path="/inventory/:id" element={<InventoryDetailsPage />} /> */}
+          
+        </Routes>
+        
     
-       Hello
-       <ChildrenDetails />
+       
        </div>
         
         <Footer />

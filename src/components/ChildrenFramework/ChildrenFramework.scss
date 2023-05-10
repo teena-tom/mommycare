@@ -1,0 +1,83 @@
+@use "../../styles/partials/colors";
+@use "../../styles/partials/mixins" as *;
+
+.childrenFramework {
+  text-align: left;
+  border-bottom: 0.0625rem solid colors.$primary-text-color-header-ivory;
+  padding: 1rem 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @include tablet {
+    padding: 1rem 2rem;
+    flex-wrap: nowrap;
+     text-align: left;
+    justify-content: space-between;
+     @include tablet__body-large;
+    gap: 0;
+  }
+
+  &:first-child {
+    border-top: 0.0625rem solid colors.$primary-text-color-header-ivory;
+
+    @include tablet {
+      border-top: none;
+    }
+  }
+
+  &:hover {
+    background-color: adjust-color($color: colors.$colir-temp, $alpha: -0.93);
+  }
+  &__address {
+    display: block;
+  }
+
+  &__col {
+    width: 50%;
+    flex: 0 1 45%;
+
+    @include tablet {
+      flex: 0;
+      min-width: 17%;
+    }
+
+    &--child_name {
+      order: -2;
+    }
+    &--address {
+        order: -2;
+    }
+    &--contact_email {
+        order: -2;
+    }
+    &--guadian_name {
+        order: -2;
+    }
+    &--contact_phone {
+        order: -2;
+    }
+  }
+
+  &__cell-header {
+    @include mobile__table-header;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    color: colors.$colir-temp;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}

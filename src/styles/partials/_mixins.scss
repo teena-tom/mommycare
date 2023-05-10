@@ -1,3 +1,5 @@
+@use "../../styles/partials/colors" as *;
+
 // Breakpoints
 
 @mixin tablet {
@@ -25,6 +27,32 @@
   line-height: 22px;
   font-weight: 400;
 }
+@mixin tablet__page-header {
+  font-family: "Sen";
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+@mixin tablet__subheader {
+  font-family: "Sen";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+@mixin tablet__table-header {
+  font-family: "Sen";
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+@mixin tablet__body-large {
+  font-family: "Sen";
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
 
 //mobile
 @mixin mobile__tables-buttons {
@@ -32,6 +60,38 @@
   font-size: 13px;
   line-height: 20px;
   font-weight: 600;
+}
+@mixin mobile__body-small {
+  font-family: "Sen";
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 400;
+}
+@mixin mobile__page-header {
+  font-family: "Sen";
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+@mixin mobile__subheader {
+  font-family: "Sen";
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+@mixin mobile__table-header {
+  font-family: "Sen";
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+@mixin mobile__body-large {
+  font-family: "Sen";
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 400;
 }
 @mixin mobile__body-small {
   font-family: "Sen";

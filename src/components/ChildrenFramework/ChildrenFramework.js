@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import './ChildrenFramework.scss';
+
 function ChildrenFramework({
   id,
   child_name,
@@ -15,7 +17,7 @@ function ChildrenFramework({
           {child_name}
         </Link>
       </div>
-      <div className="childrenFramework__col inventory-row__col--address">
+      <div className="childrenFramework__col childrenFramework__col--address">
         <h4 className="childrenFramework__cell-header">ADDRESS</h4>
         {address}
       </div>

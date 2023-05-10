@@ -13,17 +13,17 @@ return(
   <div className="slideshow">
     <Carousel>
       <div>
-        <img src={img1}>
+        <img src={img1} alt="sldieshow">
 
         </img>
       </div>
       <div>
-        <img src={img2}>
+        <img src={img2} alt="sldieshow">
           
         </img>
       </div>
       <div>
-        <img src={img3}>
+        <img src={img3} alt="sldieshow">
           
         </img>
       </div>
