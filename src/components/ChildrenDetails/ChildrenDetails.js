@@ -21,7 +21,7 @@ function ChildrenDetails() {
   },[ChildrenList]);
   console.log(ChildrenList);
   return (
-    (
+    <>
       <div className="children-list">
         <div
           className="children-list__header-child children-list__header-child--child_name
@@ -45,8 +45,7 @@ function ChildrenDetails() {
           CONTACT PHONE{" "}
         </div>
       </div>
-    ) >
-    (
+   
       <div className="children-list__body">
         <div className="children-list__row">
             {/* {ChildrenList !== null} */}
@@ -61,10 +60,10 @@ function ChildrenDetails() {
               contact_phone={child.contact_phone}
             />
           ))}
-          console.log(child_name)
+         
         </div>
       </div>
-    )
+  </>
   );
 }
 export default ChildrenDetails;
