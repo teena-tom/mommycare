@@ -1,34 +1,42 @@
 import './ChildDetails.scss';
 
-function ChildDetails({description,category,status,quantity,daycare_name}) {
+function ChildDetails({child_name,
+    address,
+    contact_email,
+    guadian_name,
+    contact_phone,daycare_name}) {
     return (
-        <div className="inventory-details">
-            <div className="inventory-details__container">
-                <div className="inventory-details__detail-item">
-                    <h4 className="inventory-details__detail-label">ITEM DESCRIPTION:</h4>
-                    <p>{description}</p>
+        <div className="child-details">
+            <div className="child-details__container">
+                <div className="child-details__detail-child">
+                    <h4 className="child-details__detail-label">NAME:</h4>
+                    <p>{child_name}</p>
                 </div>
-                <div className="inventory-details__detail-item">
-                    <h4 className="inventory-details__detail-label">CATEGORY:</h4>
-                    <p>{category}</p>
+                <div className="child-details__detail-child">
+                    <h4 className="child-details__detail-label">ADDRESS:</h4>
+                    <p>{address}</p>
                 </div>
 
             </div>
-            <div className="inventory-details__container">
-                <div className="inventory-details__detail-item">
-                    <h4 className="inventory-details__detail-label">STATUS:</h4>
-                    <p><span className={`inventory-details__tag inventory-details__tag--${status === "In Stock" ? "green" : "red"}`}>{status}</span></p>
+            <div className="child-details__container">
+                <div className="child-details__detail-child">
+                    <h4 className="child-details__detail-label">CONTACT EMAIL</h4>
+                    <h4 className={contact_email}></h4>
                 </div>
-                <div className="inventory-details__detail-item">
-                    <h4 className="inventory-details__detail-label">QUANTITY:</h4>
-                    <p>{quantity}</p>
+                <div className="child-details__detail-child">
+                    <h4 className="child-details__detail-label">GUADIAN</h4>
+                    <h4 className={guadian_name}></h4>
                 </div>
-                <div className="inventory-details__detail-item">
-                    <h4 className="inventory-details__detail-label">WAREHOUSE:</h4>
-                    <p>{warehouseName}</p>
+                <div className="child-details__detail-child">
+                    <h4 className="child-details__detail-label">CONTACT PHONE:</h4>
+                    <p>{contact_phone}</p>
+                </div>
+                <div className="child-details__detail-child">
+                    <h4 className="child-details__detail-label">DAYCARE NAME</h4>
+                    <p>{daycare_name}</p>
                 </div>
             </div>
         </div>
     );
 }
-export default InventoryDetails;
+export default ChildDetails;
