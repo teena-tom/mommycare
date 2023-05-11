@@ -13,7 +13,7 @@ function ChildrenFramework({
     <div className="childrenFramework">
       <div className="childrenFramework__col childrenFramework__col--child_name">
         <h4 className="childrenFramework__cell-header">CHILD NAME</h4>
-        <Link className="childrenFramework__link" to={`/${id}`}>
+        <Link className="childrenFramework__link" to={`/children/${id}`}>
           {child_name}
         </Link>
       </div>

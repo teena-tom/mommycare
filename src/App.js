@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Slideshow from "./components/Slideshow/Slideshow";
 import ChildrenDetails from './components/ChildrenDetails/ChildrenDetails';
-
+import ChildDetailsPage from './pages/ChildDetailsPage/ChildDetailsPage';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Slideshow />} />
           {/* <Route path="/:id" element={<WarehouseItemPage />} /> */}
           <Route path="/children" element={<ChildrenDetails />} />
-          {/* <Route path="/inventory/:id" element={<InventoryDetailsPage />} /> */}
+          <Route path="/children/:id" element={<ChildDetailsPage />} />
           
         </Routes>
         
