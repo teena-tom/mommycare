@@ -39,7 +39,7 @@ function DaycareList({Daycares}) {
               name={daycare.Daycare_name}
               address={daycare.address}
               city={daycare.city}
-              country={daycare.country}
+              
               contactName={daycare.contact_name}
               contactEmail={daycare.contact_email}
               contactPhone={daycare.contact_phone}

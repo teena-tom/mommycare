@@ -9,7 +9,7 @@ function DaycareRow({
   name,
   address,
   city,
-  country,
+  
   contact_name,
   contact_email,
   contact_phone,
@@ -22,20 +22,20 @@ function DaycareRow({
         <h4 className="daycare-row__cell-header">WAREHOUSE</h4>
         <Link className="daycare-row__link" to={`/${id}`}>
           {name}
-          <img
+          {/* <img
             className="daycare-row__icon"
             src={chevronRightIcon}
             alt="open"
-          />
+          /> */}
         </Link>
       </div>
       <div className="daycare-row__col daycare-row__col--contact-name">
         <h4 className="daycare-row__cell-header">CONTACT NAME</h4>
-        {contactName}
+        {contact_name}
       </div>
       <div className="daycare-row__col daycare-row__col--address">
         <h4 className="daycare-row__cell-header">ADDRESS</h4>
-        {address}, {city}, {country}
+        {address}, {city}
       </div>
 
       <div className="daycare-row__col daycare-row__col--contact-info">
@@ -43,15 +43,15 @@ function DaycareRow({
         <div className="daycare-row__contact-info">
           <a
             className="daycare-row__contact-item"
-            href={"phone:" + contactPhone}
+            href={"phone:" + contact_phone}
           >
-            {contactPhone}
+            {contact_phone}
           </a>
           <a
             className="daycare-row__contact-item"
-            href={"mailto:" + contactEmail}
+            href={"mailto:" + contact_email}
           >
-            {contactEmail}
+            {contact_email}
           </a>
         </div>
       </div>
