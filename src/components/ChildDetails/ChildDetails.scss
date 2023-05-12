@@ -34,7 +34,7 @@
 
     &:first-child {
       @include tablet {
-        border-right: 1px solid colors.$primary-text-color-header-ivory;
+        border-right: 1px solid colors.$colir-temp;
       }
     }
   }

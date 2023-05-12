@@ -5,6 +5,8 @@ import Footer from "./components/Footer/Footer";
 import Slideshow from "./components/Slideshow/Slideshow";
 import ChildrenDetails from './components/ChildrenDetails/ChildrenDetails';
 import ChildDetailsPage from './pages/ChildDetailsPage/ChildDetailsPage';
+import EditChild from "./components/EditChild/EditChild";
+import RegisterNewChild './components/RegisterNewChild/RegisterNewChild';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           {/* <Route path="/:id" element={<WarehouseItemPage />} /> */}
           <Route path="/children" element={<ChildrenDetails />} />
           <Route path="/children/:id" element={<ChildDetailsPage />} />
+          <Route path="/children/register" element={<RegisterNewChild />} />
+          <Route path="/children/:id/edit" element={<EditChild />} />
           
         </Routes>
         
