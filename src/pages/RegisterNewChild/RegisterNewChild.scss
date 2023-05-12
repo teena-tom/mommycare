@@ -1,5 +1,5 @@
-@use "../../styles/partials/colors";
-@use "../../styles/partials/mixins" as *;
+@use "./../../styles/partials/colors";
+@use "./../../styles/partials/mixins" as *;
 
 
 .register-newchild {
@@ -44,7 +44,7 @@
       display: flex;
       gap: 1rem;
       border-bottom: 1px solid colors.$colir-temp;
-  
+      background-color: colors.$primary-color-registration-newchild-toolbar;
       @include tablet {
         padding: 1.5rem 2.25rem 1.5rem;
       }
@@ -81,22 +81,13 @@
 
     @include tablet {
       border-bottom: none;
-      border-right: 1px solid colors.$colir-temp;
+      // border-right: 1px solid colors.$colir-temp;
       padding: 1rem 2.25rem;
       width: 50%;
     }
   }
 
-//   &__availability-container {
-//     padding: 1rem;
 
-//     @include tablet {
-     
-
-//       padding: 1rem 2.25rem;
-//       width: 50%;
-//     }
-//   }
 
   &__label {
     @include mobile__tables-buttons;
@@ -142,7 +133,7 @@
     
     &--select {
       appearance: none;
-      background-image: url("../../assets/Icons/arrow_drop_down-24px.svg");
+      background-image: url("../../assets/icons/arrow_drop_down-24px.svg");
       background-repeat: no-repeat;
       background-position: right 0.5rem bottom 50%;
 
@@ -176,7 +167,7 @@
   }
 
   &__actions {
-    background-color: $colir-temp;
+    background-color: colors.$primary-color-registration-newchild-toolbar;
     padding: 1rem;
     width: 100%;
     display: flex;
@@ -201,24 +192,24 @@
     }
 
     &--primary {
-      color: colors.$colir-temp;
-      background-color: colors.$colir-temp;
+      color: colors.$slide-show-backgorund;
+      background-color: colors.$primary-color-registerchild-button;
       border: none;
 
       &:hover {
-        background-color: colors.$primary-color-black;
+        background-color: colors.$primary-registerpage-button-onhover;
       }
     }
   
 
     &--secondary {
-      color: colors.$colir-temp;
-      background-color: colors.$colir-temp;
-      border: 1px solid colors.$colir-temp;
-
+      color: colors.$slide-show-backgorund;
+      background-color: colors.$primary-color-registerchild-button;
+      border: 1px solid colors.$primary-text-color-header-ivory;
+      border-radius: 1.5rem;
       &:hover {
-        color: colors.$colir-temp;
-        border-color: colors.$colir-temp;
+        color: colors.$slide-show-backgorund;
+        border-color: colors.$primary-text-color-on_hover;
       }
     }
   }

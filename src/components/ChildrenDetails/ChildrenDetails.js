@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ChildrenFramework from "./../ChildrenFramework/ChildrenFramework";
 import axios from "axios";
 import './ChildrenDetails.scss';
+import { Link } from "react-router-dom";
 
 const baseUrl = process.env.REACT_APP_BASE_URL ?? "http://localhost:5050/api";
 
@@ -58,6 +59,14 @@ function ChildrenDetails() {
           </div>
         </div>
       </div>
+      <Link to={`/children/register`}> <button className="childrenDetails__register-button">
+          {/* <img
+            className="child-details-page__register-icon"
+            src={editIcon}
+            alt="edit"
+          /> */}
+          <span className="childrenDetails__regitser-text">Sign-up</span>
+        </button></Link>
     </>
   );
 }

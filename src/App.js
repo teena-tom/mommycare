@@ -6,7 +6,9 @@ import Slideshow from "./components/Slideshow/Slideshow";
 import ChildrenDetails from './components/ChildrenDetails/ChildrenDetails';
 import ChildDetailsPage from './pages/ChildDetailsPage/ChildDetailsPage';
 import EditChild from "./components/EditChild/EditChild";
-import RegisterNewChild './components/RegisterNewChild/RegisterNewChild';
+import RegisterNewChild from './pages/RegisterNewChild/RegisterNewChild';
+
+
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
        <div className="App__body">
        <Routes>
           <Route path="/" element={<Slideshow />} />
-          {/* <Route path="/:id" element={<WarehouseItemPage />} /> */}
+          {/* <Route path="/:id" element={<Daycare />} /> */}
           <Route path="/children" element={<ChildrenDetails />} />
           <Route path="/children/:id" element={<ChildDetailsPage />} />
           <Route path="/children/register" element={<RegisterNewChild />} />

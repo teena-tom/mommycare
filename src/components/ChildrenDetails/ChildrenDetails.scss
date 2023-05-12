@@ -49,4 +49,26 @@
     flex-direction: column;
     justify-content: space-between;
   }
+  &__register-button {
+    background-color: colors.$active-button-color;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+
+    @include tablet {
+      padding: 0.5rem 1rem;
+    }
+  }
+  &__register-text {
+    color: colors.$primary-text-color-on_hover;
+    vertical-align: middle;
+    display: none;
+    margin-left: 0.25rem;
+
+    @include tablet {
+      @include tablet__tables-buttons;
+      display: inline;
+    }
+  }
 }

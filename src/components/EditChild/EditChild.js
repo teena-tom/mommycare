@@ -1,31 +1,34 @@
 import { useEffect, useState } from 'react';
 import './EditChild.scss';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import CtaButton from '../CtaButton/CtaButton';
 
 const baseUrl = process.env.REACT_ALL_BASE_URL ?? "http://localhost:5050/api";
 
-function EditChild({ child, onChildUpdated }) {
+function EditChild() {
     const navigate = useNavigate();
-    const [values, setValues] = useState({ childName: child.child_name, address: child.address, city: child.city, guadian_name: child.guadian_name, daycare: child.daycares_id, contact_phone:child.contact_phone, contact_email: child.contact_email,  username: child.username, password: child.password});
+    const { id } = useParams();
+    const [values, setValues] = useState(null);
     const [daycares, setDaycares] = useState(null);
     
+    // { childName: child.child_name, address: child.address, city: child.city, guadian_name: child.guadian_name, daycare: child.daycares_id, contact_phone:child.contact_phone, contact_email: child.contact_email,  username: child.username, password: child.password}
 
 
     //Onload get daycares 
     useEffect(() => {
         axios
-            .get(`${baseUrl}/daycares`)
+            .get(`${baseUrl}/children/${id}`)
             .then(response => {
-                setDaycares(response.data);
-                setValues({...values,"daycare": response.data.find(daycare => daycare.daycare_name===child.daycare_name).id});
+                setValues(response.data);
+                // setValues({...values,"daycare": response.data.find(daycare => daycare.daycare_name===child.daycare_name).id});
+                console.log(response.data);
             })
             .catch(error => {
                 console.error(error);
                 alert("Error while retrieving daycares");
             });
-        }, [daycares])
+        }, [id])
         
 
     const handleChange = (event) => {
@@ -34,15 +37,15 @@ function EditChild({ child, onChildUpdated }) {
     };
 
     const handleSave = () => {
-        if(!values.childName || !values.address){
+        if(!values.child_name || !values.address || !values.guadian_name || !values.contact_email || !values.contact_phone || !values.username || !values.password || !values.city){
             alert("Missing required fields.");
             return;
         }
 
         axios
-            .put(`${baseUrl}/children/${child.id}`, {
+            .put(`${baseUrl}/children/${id}`, {
                 "daycare_id": values.daycare,
-                "child_name": values.childName,
+                "child_name": values.child_name,
                 "address": values.address,
                 "city": values.city,
                 "guadian_name": values.guadian_name,
@@ -52,8 +55,8 @@ function EditChild({ child, onChildUpdated }) {
                 "password": values.password
             })
             .then(response => {
-                onChildUpdated();
-                navigate(`/children/${child.id}`);
+                // onChildUpdated();
+                navigate(`/children/${id}`);
             })
             .catch(error => {
                 alert(error);
@@ -65,6 +68,9 @@ function EditChild({ child, onChildUpdated }) {
         navigate(-1);
     }
 
+    if (!values) {
+        return <p>loading</p>;
+      }
     return (
         <form className="edit-child">
             <div className="edit-child__details-container">
@@ -72,7 +78,7 @@ function EditChild({ child, onChildUpdated }) {
                 <div className="edit-child__form-group">
                     <div className="edit-child__field-item">
                         <label className="edit-child__label" htmlFor="childName">Child name</label>
-                        <input className="edit-child__input" type="text" name="childName" id="childName" required={true} placeholder='Child Name'  value={values.childName} onChange={handleChange} />
+                        <input className="edit-child__input" type="text" name="childName" id="childName" required={true} placeholder='Child Name'  value={values.child_name} onChange={handleChange} />
                     </div>
                     <div className="edit-child__field-item">
                         <label className="edit-child__label" htmlFor="address">Address</label>

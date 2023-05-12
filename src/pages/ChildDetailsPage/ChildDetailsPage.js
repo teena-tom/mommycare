@@ -41,7 +41,7 @@ function ChildDetailsPage() {
           </button>
           {child.child_name}
         </h1>
-        <Link to="./edit"> <button className="child-details-page__edit-button">
+        <Link to={`/children/${id}/edit`}> <button className="child-details-page__edit-button">
           <img
             className="child-details-page__edit-icon"
             src={editIcon}
@@ -58,7 +58,10 @@ function ChildDetailsPage() {
         contact_phone={child.contact_phone}
         daycare_name={child.daycare_name}
       />
+
+
     </main>
+
   );
 }
 export default ChildDetailsPage;
