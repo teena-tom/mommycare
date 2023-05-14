@@ -1,8 +1,8 @@
-import "./WarehouseRow.scss";
+import "./DaycareRow.scss";
 import { Link, useNavigate } from "react-router-dom";
-import chevronRightIcon from "../../assets/Icons/chevron_right-24px.svg";
-// import deleteIcon from "../../assets/Icons/delete_outline-24px.svg";
-import editIcon from "../../assets/Icons/edit-24px.svg";
+// import chevronRightIcon from "../../assets/icons/chevron_right-24px.svg";
+import deleteIcon from "../../assets/icons/delete_outline-24px.svg";
+import editIcon from "../../assets/icons/edit-24px.svg";
 
 function DaycareRow({
   id,
@@ -13,8 +13,8 @@ function DaycareRow({
   contact_name,
   contact_email,
   contact_phone,
-//   onDelete,
-  onEdit,
+  onDelete,
+  // onEdit,
 }) {
   return (
     <div className="daycare-row">
@@ -24,7 +24,7 @@ function DaycareRow({
           {name}
           {/* <img
             className="daycare-row__icon"
-            src={chevronRightIcon}
+            // src={chevronRightIcon}
             alt="open"
           /> */}
         </Link>

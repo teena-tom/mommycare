@@ -1,13 +1,13 @@
 import "./DaycareList.scss";
-import DaycareRow from "../WarehouseRow/WarehouseRow";
+import DaycareRow from "../DaycareRow/DaycareRow";
 
 
 
-function DaycareList({Daycares}) {
+function DaycareList({Daycares, onDelete}) {
 
-//   const handleDelete = (id) => {
-//     onDelete(id);
-//   };
+  const handleDelete = (id) => {
+    onDelete(id);
+  };
 
   const handleEdit = (id) => {};
 
@@ -32,7 +32,7 @@ function DaycareList({Daycares}) {
       </div>
       <div className="Daycare-list__body">
         <div className="Daycare-list__row">
-          {daycares.map((daycare) => (
+          {Daycares.map((daycare) => (
             <DaycareRow
               key={daycare.id}
               id={daycare.id}

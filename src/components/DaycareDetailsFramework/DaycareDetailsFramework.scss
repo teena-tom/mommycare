@@ -1,0 +1,33 @@
+@use "../../styles/partials/mixins" as *;
+@use '../../styles/partials/colors';
+
+.children-framework {
+    display:flex;
+    flex-direction: row;
+    text-transform: uppercase;
+
+    &__container {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        background-color: colors.$primary-header-color-dim_grey;
+
+
+    }
+
+    &__container-headers {
+        color: colors.$secondary-color-slate;
+        background-color: colors.$primary-header-color-dim_grey;
+        @include tablet__table-header;
+        padding: 0.5rem 2rem;
+        width: 100%;
+        display: none;
+    
+        @include tablet {
+          display: flex;
+          justify-content: space-evenly;
+        }
+    }
+
+   
+}

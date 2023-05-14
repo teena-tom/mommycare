@@ -5,8 +5,9 @@ import axios from "axios";
 import backArrow from "./../../assets/icons/arrow_back-24px.svg";
 import errorIcon from "./../../assets/icons/error-24px.svg";
 
+const baseUrl = process.env.REACT_ALL_BASE_URL ?? "http://localhost:5050/api";
+
 export default function RegisterNewChild() {
-  const baseUrl = process.env.REACT_ALL_BASE_URL ?? "http://localhost:5050/api";
   const childName = useRef(null);
   const address = useRef(null);
   const guadian_name = useRef(null);
@@ -15,8 +16,7 @@ export default function RegisterNewChild() {
   const city = useRef(null);
   const username = useRef(null);
   const password = useRef(null);
-  const DaycareId = useRef(null);
-
+  
   const [selectedDaycare, setSelectedDaycare] = useState(null);
 
   const [daycares, setDaycares] = useState([]);
@@ -49,6 +49,7 @@ export default function RegisterNewChild() {
         console.log(error);
         alert("Error while retrieving daycares");
       });
+    //eslint-disable-next-line
   }, []);
 
   const handleDaycareChange = (e) => {
@@ -59,10 +60,13 @@ export default function RegisterNewChild() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(e);
 
+    console.log(childName.current.value);
     let newErrors = { ...errors };
 
     newErrors.childName = childName.current.value.trim() === "";
+
     newErrors.address = address.current.value.trim() === "";
     newErrors.guadian_name = guadian_name.current.value.trim() === "";
     newErrors.contact_email = contact_email.current.value.trim() === "";
@@ -100,15 +104,14 @@ export default function RegisterNewChild() {
       username: username.current.value,
       password: password.current.value,
       city: city.current.value,
-
-      daycare_id: selectedDaycare.id,
+      daycares_id: selectedDaycare.id,
     };
-
-    //send new item to server
+   
     axios
-      .post(`http://localhost:5050/api/children`, newChild)
+
+      .post(`${baseUrl}/children`, newChild)
       .then((response) => navigate(`/children`))
-      // /${response.data.id}
+      
       .catch((error) => {
         alert(error);
         console.error(error);
@@ -119,7 +122,7 @@ export default function RegisterNewChild() {
     <main>
       <div className="register-newchild__header">
         <h1 className="register-newchild__title">
-          <Link to="/children">
+          <Link to="/">
             <button className="register-newchild__back-button">
               <img
                 className="register-newchild__back-icon"
@@ -195,13 +198,41 @@ export default function RegisterNewChild() {
                 className={`register-newchild__input ${
                   errors.contact_email ? "register-newchild__input--error" : ""
                 }`}
-                ref={childName}
+                ref={contact_email}
                 type="text"
                 name="contact_email"
                 id="contact_email"
                 placeholder="Contact Email"
               />
               {errors.contact_email && (
+                <div className="register-newchild__error-label">
+                  <img
+                    className="register-newchild__error-icon"
+                    src={errorIcon}
+                    alt="error"
+                  />
+                  This field is required
+                </div>
+              )}
+            </div>
+            <div className="register-newchild__field-item">
+              <label
+                className="register-newchild__label"
+                htmlFor="guadian_name"
+              >
+                Guadian Name
+              </label>
+              <input
+                className={`register-newchild__input ${
+                  errors.guadian_name ? "register-newchild__input--error" : ""
+                }`}
+                ref={guadian_name}
+                type="text"
+                name="guadian_name"
+                id="guadian_name"
+                placeholder="Guadian Name"
+              />
+              {errors.guadian_name && (
                 <div className="register-newchild__error-label">
                   <img
                     className="register-newchild__error-icon"
@@ -275,7 +306,7 @@ export default function RegisterNewChild() {
                 }`}
                 ref={username}
                 type="text"
-                name="usename"
+                name="username"
                 id="username"
                 placeholder="Username"
               />
@@ -330,7 +361,7 @@ export default function RegisterNewChild() {
             >
               <option value="">Please Select</option>
               {daycares.map((daycare) => (
-                <option key={daycare.id} value="">
+                <option key={daycare.id} value={daycare.id}>
                   {daycare.daycare_name}
                 </option>
               ))}
