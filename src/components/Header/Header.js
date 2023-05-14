@@ -14,7 +14,7 @@ function Header() {
       <div className="header__right">
         <div className="header__daycare">
           {" "}
-          <NavLink to="/" className="header__button">
+          <NavLink to="/daycares" className="header__button">
             Daycares
           </NavLink>
         </div>

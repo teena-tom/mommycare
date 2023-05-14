@@ -3,7 +3,7 @@ import DaycareRow from "../DaycareRow/DaycareRow";
 
 
 
-function DaycareList({Daycares, onDelete}) {
+function DaycareList({daycares, onDelete}) {
 
   const handleDelete = (id) => {
     onDelete(id);
@@ -26,13 +26,13 @@ function DaycareList({Daycares, onDelete}) {
         <div className="Daycare-list__header-item Daycare-list__header-item--contact-info">
           CONTACT INFORMATION 
         </div>
-        {/* <div className="Daycare-list__header-item">
+        <div className="Daycare-list__header-item">
           ACTIONS
-        </div> */}
+        </div>
       </div>
       <div className="Daycare-list__body">
         <div className="Daycare-list__row">
-          {Daycares.map((daycare) => (
+          {daycares.map((daycare) => (
             <DaycareRow
               key={daycare.id}
               id={daycare.id}
