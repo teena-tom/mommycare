@@ -8,18 +8,21 @@ function DaycareRow({
   id,
   name,
   address,
-  city,
-  
-  contact_name,
-  contact_email,
-  contact_phone,
+  city,  
+  contactName,
+  contactEmail,
+  contactPhone,
+  contactPosition,
+  max_limit_of_children,
+ 
+  // contact_phone,
   onDelete,
-  // onEdit,
+  onEdit,
 }) {
   return (
     <div className="daycare-row">
       <div className="daycare-row__col daycare-row__col--name">
-        <h4 className="daycare-row__cell-header">WAREHOUSE</h4>
+        <h4 className="daycare-row__cell-header">DAYCARE</h4>
         <Link className="daycare-row__link" to={`/${id}`}>
           {name}
           {/* <img
@@ -31,11 +34,15 @@ function DaycareRow({
       </div>
       <div className="daycare-row__col daycare-row__col--contact-name">
         <h4 className="daycare-row__cell-header">CONTACT NAME</h4>
-        {contact_name}
+        {contactName}
+        <p>{contactPosition}</p>
+        
+       
       </div>
       <div className="daycare-row__col daycare-row__col--address">
         <h4 className="daycare-row__cell-header">ADDRESS</h4>
-        {address}, {city}
+        {address}, 
+        <p>{city} (City)</p>
       </div>
 
       <div className="daycare-row__col daycare-row__col--contact-info">
@@ -43,15 +50,15 @@ function DaycareRow({
         <div className="daycare-row__contact-info">
           <a
             className="daycare-row__contact-item"
-            href={"phone:" + contact_phone}
+            href={"phone:" + contactPhone}
           >
-            {contact_phone}
+            {contactPhone}
           </a>
           <a
             className="daycare-row__contact-item"
-            href={"mailto:" + contact_email}
+            href={"mailto:" + contactEmail}
           >
-            {contact_email}
+            {contactEmail}
           </a>
         </div>
       </div>

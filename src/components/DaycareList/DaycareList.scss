@@ -14,7 +14,7 @@
   }
 
   &__header-row {
-    color: colors.$primary-registerpage-button-onhover;
+    color: colors.$primary-color-black;
     background-color: colors.$primary-header-color-dim_grey;
     @include tablet__table-header;
     padding: 0.5rem 2rem;

@@ -36,17 +36,20 @@ function DaycareList({daycares, onDelete}) {
             <DaycareRow
               key={daycare.id}
               id={daycare.id}
-              name={daycare.Daycare_name}
+              name={daycare.daycare_name}
               address={daycare.address}
               city={daycare.city}
               
               contactName={daycare.contact_name}
               contactEmail={daycare.contact_email}
               contactPhone={daycare.contact_phone}
+              contactPosition={daycare.contact_position}
               onDelete={() => handleDelete(daycare.id)}
               onEdit={() => handleEdit(daycare.id)}
             />
+            
           ))}
+         
         </div>
       </div>
     </div>

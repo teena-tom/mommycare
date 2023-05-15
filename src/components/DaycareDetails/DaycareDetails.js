@@ -25,4 +25,4 @@ const DaycareDetails = ({daycare_name, address, city, contact_name, contact_posi
         </div> 
     )
 }
-export default WarehouseDetails
+export default DaycareDetails

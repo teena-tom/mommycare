@@ -1,4 +1,4 @@
-import sortIcon from "../../assets/Icons/sort-24px.svg";
+
 import "./DaycareDetailsFramework.scss";
 
 const DaycareDetailsFramework = () => {

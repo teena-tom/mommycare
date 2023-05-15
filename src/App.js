@@ -8,6 +8,7 @@ import ChildDetailsPage from './pages/ChildDetailsPage/ChildDetailsPage';
 import EditChild from "./components/EditChild/EditChild";
 import RegisterNewChild from './pages/RegisterNewChild/RegisterNewChild';
 import DaycarePage from "./pages/DaycarePage/DaycarePage";
+import DaycareDetailsPage from "./pages/DaycareDetailsPage/DaycareDetailsPage";
 
 
 
@@ -20,6 +21,7 @@ function App() {
        <Routes>
           <Route path="/" element={<Slideshow />} />
           <Route path="/daycares" element={<DaycarePage />} />
+          <Route path="/:id" element={<DaycareDetailsPage />} />
           <Route path="/children" element={<ChildrenDetails />} />
           <Route path="/children/:id" element={<ChildDetailsPage />} />
           <Route path="/children/register" element={<RegisterNewChild />} />

@@ -17,8 +17,8 @@
   }
 
   &--primary {
-    color: colors.$colir-temp;
-    background-color: colors.$colir-temp;
+    color: colors.$primary-color-white;
+    background-color: colors.$primary-button-bgcolor;
     border: none;
 
     &:hover {
@@ -27,13 +27,14 @@
   }
 
   &--secondary {
-    color: colors.$colir-temp;
-    background-color: colors.$colir-temp;
-    border: 1px solid colors.$colir-temp;
+    color: colors.$primary-color-white;
+    background-color: colors.$primary-button-bgcolor;
+    border: 1px solid colors.$primary-color-btn;
 
     &:hover {
-      color: colors.$colir-temp;
-      border-color: colors.$colir-temp;
+      color: colors.$primary-color-white;
+      border-color: colors.$primary-color-btn;
+      background-color: colors.$primary-color-btn;
     }
   }
 
