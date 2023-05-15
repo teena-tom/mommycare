@@ -59,12 +59,8 @@ function ChildrenDetails() {
           </div>
         </div>
       </div>
-      <Link to={`/children/register`}> <button className="childrenDetails__register-button">
-          {/* <img
-            className="child-details-page__register-icon"
-            src={editIcon}
-            alt="edit"
-          /> */}
+      <Link to={`/children/register`} className="childrenDetails__registerbutton"> <button className="childrenDetails__register-button">
+         
           <span className="childrenDetails__regitser-text">Sign-up</span>
         </button></Link>
     </>

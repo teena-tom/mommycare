@@ -2,28 +2,53 @@
 @use "./../../styles/partials/mixins" as *;
 @use "./../../styles/partials/typography" as *;
 
-footer {
-  padding: 16px;
+.footer {
+  padding: 2px 16px;
+  width: 100%;
+  background-color: #FEFAF5;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-top: auto;
-  padding-bottom: 3rem;
-  align-items: center;
-  justify-content: center;
+  // padding-bottom: 3rem;
+  // align-items: center;
+  justify-content: space-between;
   color: $primary-text-color-header-ivory;
   background-color: $primary-header-color-dim_grey;
   position: fixed;
   bottom: 0;
   @include tablet {
-    padding: 32px;
+    padding:2px 32px;
     display: flex;
+    flex-direction: row;
   }
   @include desktop {
-    padding: 24px;
+    padding:2px 24px;
+    display: flex;
+    flex-direction: row;
   }
   &__text {
     @include mobile__body-small;
     @include tablet {
       @include tablet__body-small;
     }
+  }
+  &__left{
+   
+    display: flex;
+    flex-direction: row;
+    border: solid 1px $primary-text-color-header;
+    
+  }
+  &--social{
+    padding:0 2rem;
+    margin: 0 rem;
+    width:12px;
+    height: 12px;
+    
+  }
+  &__right{
+    display: flex;
+    text-align: right;
   }
 }

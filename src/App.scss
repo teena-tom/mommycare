@@ -1,8 +1,11 @@
+import body-image from 
 .App {
     text-align: center;
   
     &__body {
       min-height: 100vh;
+      background-image: url('./assets/images/body-image.jpeg');
+      
     }
   }
   

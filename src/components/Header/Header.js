@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Hlogo from "./../../assets/icons/home-logo.png";
+import Hlogo from "./../../assets/images/sanbox-daycare-main-r.png";
 import "./Header.scss";
 
 function Header() {
@@ -9,6 +9,7 @@ function Header() {
         <NavLink to="/">
           {" "}
           <img className="header__logo" src={Hlogo} alt="logo"></img>
+          
         </NavLink>
       </div>
       <div className="header__right">

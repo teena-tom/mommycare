@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: $primary-text-color-header-ivory;
+  color: $primary-text-color-header;
   background-color: $primary-header-color-dim_grey;
   @include tablet {
     padding: 32px;
@@ -21,7 +21,7 @@
     padding: 24px;
   }
   &__logo{
-    width: 3rem;
+    width: 20rem;
     height: auto;
   }
   &__left {
@@ -40,20 +40,22 @@
   &__button {
     border-radius: 20px;
     border: none;
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
+    margin:0.3rem;
     display: flex;
-    background-color: $primary-header-color-dim_grey;
-    color: $primary-text-color-header-ivory;
+    background-color: $secondary-color-slate;
+    color: $primary-text-color-header;
     text-decoration: none;
     @include mobile__tables-buttons;
     &:active {
       background-color: $active-button-color;
-      color: $primary-text-color-on_hover;
+      color: $primary-text-color-header;
       text-decoration: none;
     }
     &:hover {
       text-decoration: underline;
       text-decoration-color: $primary-text-color-on_hover;
+      color: $primary-text-color-header-ivory;
     }
 
     @include tablet {

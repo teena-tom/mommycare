@@ -36,7 +36,7 @@
   }
 
   &__edit-button {
-    background-color: colors.$active-button-color;
+    background-color: colors.$slide-show-backgorund;
     border: none;
     border-radius: 1.5rem;
     cursor: pointer;
@@ -45,8 +45,12 @@
     @include tablet {
       padding: 0.5rem 1rem;
     }
+    
   }
-
+ 
+  &__edit-button:hover{
+    background-color:colors.$primary-registerpage-button-onhover;;
+  }
   &__edit-icon {
     filter: brightness(1000%);
     vertical-align: middle;

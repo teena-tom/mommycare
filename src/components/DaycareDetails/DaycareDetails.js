@@ -21,7 +21,7 @@ const DaycareDetails = ({daycare_name, address, city, contact_name, contact_posi
               <p className="Daycare-details__text">{contact_email}</p>
             </div>
           </div>
-          {/* div for inventory list here */}
+          {/* div for children list here */}
         </div> 
     )
 }
