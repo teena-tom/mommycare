@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import './ChildrenFramework.scss';
+import editIcon from './../../assets/icons/edit-24px.svg';
+import deleteIcon from './../../assets/icons/delete_outline-24px.svg';
 
 function ChildrenFramework({
   id,
@@ -8,6 +10,8 @@ function ChildrenFramework({
   contact_email,
   guadian_name,
   contact_phone,
+  onDelete,
+  onEdit,
 }) {
   return (
     <div className="childrenFramework">
@@ -33,6 +37,17 @@ function ChildrenFramework({
       <div className="childrenFramework__col childrenFramework__col--contact_phone">
         <h4 className="childrenFramework__cell-header">CONTACT PHONE</h4>
         {contact_phone}
+      </div>
+      <div className=" childrenFramework__col--actions">
+        <button className="childrenFramework__icon-button" onClick={onDelete}>
+          <img className="childrenFramework__icon" src={deleteIcon} alt="delete" />
+        </button>
+        <Link to={`/children/${id}/edit`}
+          className="childrenFramework__icon-button childrenFramework__icon-button--edit"
+          onClick={onEdit}
+        >
+          <img className="childrenFramework__icon" src={editIcon} alt="edit" />
+        </Link>
       </div>
     </div>
   );

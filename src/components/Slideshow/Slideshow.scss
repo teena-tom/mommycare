@@ -2,21 +2,27 @@
 @use "../../styles/partials/colors" as *;
 
 .slideshow{
-  padding: 16px;
- min-height: 80vh;
+  // padding: 16px;
+ min-height: 70vh;
  width: 100%;
  opacity: .8;
-  @include tablet{
-    padding: 36px;
-  }
-  @include desktop{
-    padding: 24px;
-  }
+ 
+  // @include tablet{
+  //   padding: 36px;
+  // }
+  // @include desktop{
+  //   padding: 24px;
+  // }
   .slide{
     background-color: $slide-show-backgorund;
   }
   .control-dots{
     margin: 60px auto;
+  }
+  .thumbs-wrapper{
+    display: flex;
+ align-items: center;
+ justify-content: center;
   }
 &:hover{
   opacity: 1;

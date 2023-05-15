@@ -8,26 +8,31 @@ function Footer() {
   return (
     <div className="footer">
          <div className="footer__left">
+          <div className="footer__jointext">
+         <h4 >Join us on Social</h4> </div>
+         <div className="footer__social-container">
         <div className="footer__left-social">
-        <Link className="footer__left footer__left--social" to="https://www.instagram.com"
-          ><img
+        <Link  to="https://www.instagram.com"
+          ><img className="footer__social"
             src={insta}
             alt="Instagram"
            
         /></Link>
         </div>
             <div className="footer__left-social">
-        <Link className="footer__left footer__left--social" to="https://www.facebook.com/"
-          ><img
+        <Link  to="https://www.facebook.com/"
+          ><img className="footer__social"
             src={fb}
             alt="facebook"
            
         /></Link>
         </div>
             <div className="footer__left-social">
-        <Link className="footer__left footer__left--social" to="https://www.twitter.com/"
-          ><img src={twittr} alt="Twitter"
+        <Link  to="https://www.twitter.com/"
+          ><img className="footer__social"
+          src={twittr} alt="Twitter"
         /></Link>
+        </div>
         </div>
       </div>
       <div className="footer__right">

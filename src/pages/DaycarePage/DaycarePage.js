@@ -62,7 +62,7 @@ function DaycarePage({mode = "view"}) {
             <img className="Daycares-Page__arrow" src={backArrow} alt="back" />
           </button>
         </Link>
-        <h1 className="Daycares-Page__title">Add New Warehouse</h1>
+        {/* <h1 className="Daycares-Page__title">Add New Warehouse</h1> */}
         </>
         }
         
@@ -70,7 +70,7 @@ function DaycarePage({mode = "view"}) {
         <>
          <h1 className="Daycares-Page__title">Daycares</h1>
         <input type="search" name="search" className="Daycares-Page__search-field" placeholder="Search..." />
-        <Link to="/add"><CtaButton>+ Add New Daycare</CtaButton></Link>
+        {/* <Link to="/add"><CtaButton>+ Add New Daycare</CtaButton></Link> */}
         </>
         }
       </div>

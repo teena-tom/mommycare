@@ -13,7 +13,7 @@ function DaycareRow({
   contactEmail,
   contactPhone,
   contactPosition,
-  max_limit_of_children,
+  daycare_name,
  
   // contact_phone,
   onDelete,
@@ -66,9 +66,9 @@ function DaycareRow({
         <button className="daycare-row__icon-button" onClick={onDelete}>
           <img className="daycare-row__icon" src={deleteIcon} alt="delete" />
         </button>
-        <Link className="daycare-row__link" to={`/${id}/edit`}>
+        {/* <Link className="daycare-row__link" to={`/${id}/edit`}>
           <img className="daycare-row__icon" src={editIcon} alt="edit" />
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

@@ -26,6 +26,7 @@ const DaycareDetailsFramework = () => {
       <div className="children-framework__container">
         <h4 className="children-framework__container-headers">Guadian</h4>
       </div>
+      
     </div>
   );
 };
