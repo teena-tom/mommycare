@@ -1,3 +1,29 @@
+# Mommycare
+
+Mommycare is a dashboard application that allows parents to quickly
+discover a creche for their child.
+## Download
+download both server-side and client-side code from GitHub
+
+## Installation
+
+To run the application, install basic packages on both sides using the npm I package.
+
+### Run 
+To start the application, the first user should run the server-side using "dev mon" on their terminal and then run "npm start" on the client side.
+
+## Usage
+
+
+
+#We welcome pull requests for contributions to our project. If you plan on making significant changes, it's best to open an issue first to discuss your proposed modifications. Additionally, please remember to update any relevant tests.
+
+## License
+
+MommyCare Inc.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +94,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
