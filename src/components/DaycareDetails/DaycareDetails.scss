@@ -4,6 +4,14 @@
 .Daycare-details {
 
     text-align: left;
+    padding: 16px;
+
+    @include tablet {
+      padding: 32px;
+    }
+    @include desktop {
+      padding: 24px;
+    }
 
     &__container-info {
       display: flex;

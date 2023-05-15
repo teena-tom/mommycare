@@ -8,22 +8,27 @@ function Footer() {
   return (
     <div className="footer">
          <div className="footer__left">
-        
-        <Link className="footer__left footer__left--social" href="https://www.instagram.com"
+        <div className="footer__left-social">
+        <Link className="footer__left footer__left--social" to="https://www.instagram.com"
           ><img
             src={insta}
             alt="Instagram"
            
         /></Link>
-        <Link className="footer__left footer__left--social" href="https://www.facebook.com/"
+        </div>
+            <div className="footer__left-social">
+        <Link className="footer__left footer__left--social" to="https://www.facebook.com/"
           ><img
             src={fb}
             alt="facebook"
            
         /></Link>
-        <Link className="footer__left footer__left--social" href="https://www.twitter.com/"
+        </div>
+            <div className="footer__left-social">
+        <Link className="footer__left footer__left--social" to="https://www.twitter.com/"
           ><img src={twittr} alt="Twitter"
         /></Link>
+        </div>
       </div>
       <div className="footer__right">
       <p className="footer__text">&copy; MommyCare Inc. All Rights Reserved </p>

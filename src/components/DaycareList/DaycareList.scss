@@ -2,6 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .Daycare-list {
+  
   @include mobile__body-large;
   text-align: left;
   //TEMP
@@ -11,19 +12,25 @@
 
   @include tablet {
     @include tablet__body-large;
+   
   }
 
   &__header-row {
     color: colors.$primary-color-black;
-    background-color: colors.$primary-header-color-dim_grey;
+    background-color: colors.$primary-color-geader-row;
     @include tablet__table-header;
-    padding: 0.5rem 2rem;
-    width: 100%;
+    // padding: 0.5rem 2rem;
+    padding: 16px;
+   
     display: none;
 
     @include tablet {
       display: flex;
+      padding: 32px;
       justify-content: space-evenly;
+    }
+    @include desktop{
+      padding: 24px;
     }
   }
 

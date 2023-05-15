@@ -3,11 +3,14 @@
 
 .slideshow{
   padding: 16px;
- height: 80vh;
+ min-height: 80vh;
  width: 100%;
  opacity: .8;
   @include tablet{
     padding: 36px;
+  }
+  @include desktop{
+    padding: 24px;
   }
   .slide{
     background-color: $slide-show-backgorund;

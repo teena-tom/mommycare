@@ -3,31 +3,31 @@
 @use "./../../styles/partials/typography" as *;
 
 .footer {
-  padding: 2px 16px;
-  width: 100%;
-  background-color: #FEFAF5;
+  padding: 16px;
+  width:-webkit-fill-available;
+  background-color: #fefaf5;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-top: auto;
-  // padding-bottom: 3rem;
-  // align-items: center;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  // margin-top: auto;
   color: $primary-text-color-header-ivory;
-  background-color: $primary-header-color-dim_grey;
-  position:absolute;
+  background-color: $footer-bg-color;
+  position: fixed;
   bottom: 0;
-  left:0;
+  left: 0;
   padding-top: 1rem;
   @include tablet {
-    padding:2px 32px;
+    padding: 32px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
   @include desktop {
-    padding:2px 24px;
+    padding: 24px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
   &__text {
     @include mobile__body-small;
@@ -35,22 +35,36 @@
       @include tablet__body-small;
     }
   }
-  &__left{
-   
+  &__left {
     display: flex;
     flex-direction: row;
-    border: solid 1px $primary-text-color-header;
-    
   }
-  &--social{
-    padding:0 2rem;
+    
+  &--social {
+    padding: 0 2rem;
     margin: 0 rem;
-    width:12px;
-    height: 12px;
-    
+    width: 8px;
+    height: 8px;
   }
-  &__right{
+  &__left-social{
+    border-width: solid 2px;
+    border-color: $primary-text-color-header;
+    border-radius: 4px;
+    background-color: $primary-color-black;
+    opacity: 1;
+  }
+  &__left-social:hover{
+    transition-duration: .3s;
+    transition-property: transform;
+  transform: scale(1.1);
+  opacity: .9;
+    color: #fff;
+  
+     
+
+  }
+  &__right {
     display: flex;
-    text-align: right;
+    text-align: left;
   }
 }
