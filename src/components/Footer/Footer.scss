@@ -15,8 +15,10 @@
   justify-content: space-between;
   color: $primary-text-color-header-ivory;
   background-color: $primary-header-color-dim_grey;
-  position: fixed;
+  position:absolute;
   bottom: 0;
+  left:0;
+  padding-top: 1rem;
   @include tablet {
     padding:2px 32px;
     display: flex;
