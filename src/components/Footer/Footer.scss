@@ -17,13 +17,15 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  padding-top: 1rem;
+  // padding-top: 1rem;
+max-height: 7rem;
   @include tablet {
     margin: 0 32px 0 32px;
     width: calc(100% - 64px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-height: 4rem;
   }
   @include desktop {
     margin: 0 24px 0 24px;
@@ -49,7 +51,7 @@
 
   &__social {
     padding: 0 2rem;
-    margin: 0 rem;
+  
     width: 15px;
     height: 15px;
   }

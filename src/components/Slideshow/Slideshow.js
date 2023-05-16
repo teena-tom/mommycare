@@ -7,11 +7,12 @@ import img3 from "./../../assets/images/daycare-image3.jpg";
 import { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { NavLink } from "react-router-dom";
 
 function Slideshow() {
   return (
     <div className="slideshow">
-      <Carousel>
+      <Carousel className="slideshow__carousel">
         <div>
           <img src={img0} alt="sldieshow"></img>
         </div>
@@ -25,6 +26,14 @@ function Slideshow() {
           <img src={img3} alt="sldieshow"></img>
         </div>
       </Carousel>
+
+      <div className="slideshow__hero-text">
+        <h1>ENROLL YOUR CHILD IN ONE OF OUR DAYCARE</h1>
+
+        <NavLink to="/daycares" className="slideshow__button">
+          Find Daycare
+        </NavLink>
+      </div>
     </div>
   );
 }

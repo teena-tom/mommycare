@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import backArrow from "./../../assets/icons/arrow_back-24px.svg";
 import errorIcon from "./../../assets/icons/error-24px.svg";
+import regimg from "./../../assets/images/image-register-child.png";
 
 const baseUrl = process.env.REACT_ALL_BASE_URL ?? "http://localhost:5050/api";
 
@@ -134,8 +135,12 @@ export default function RegisterNewChild() {
           {"Register New Child"}
         </h1>
       </div>
+     
       <form className="register-newchild" onSubmit={handleSubmit}>
+      <div className="register-newchild__formcontainer">
+        <div className="register-newchild__formsection">
         <section className="register-newchild__details-container">
+
           <h2 className="register-newchild__heading">Child Details</h2>
           <div className="register-newchild__form-group">
             <div className="register-newchild__field-item">
@@ -378,6 +383,11 @@ export default function RegisterNewChild() {
             )}
           </div>
         </section>
+        </div>
+        <div className="register-newchild__imagesection">
+          <img className="register-newchild__image" alt="imaage" src={regimg}></img>
+        </div>
+        </div>
 
         <div className="register-newchild__actions">
           <button

@@ -2,10 +2,20 @@
 @use "../../styles/partials/colors" as *;
 
 .slideshow {
-  min-height: 70vh;
+  max-height: 50vh;
+  @include tablet{
+    max-height: 30vh;
+  }
+  
+  &__carousel{
+    
   width: 100%;
   opacity: 0.8;
-
+    max-height: 40%;
+    @include tablet{
+      max-height: 30vh;
+    }
+  }
   .control-dots {
     margin: 60px auto;
   }
@@ -16,5 +26,35 @@
   }
   &:hover {
     opacity: 1;
+  }
+  
+  &__hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $primary-text-color-header;
+  }
+  &__button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: $primary-text-color-header;
+    background-color: $hover-edit-button;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    @include mobile__tables-buttons;
+    @include tablet {
+      @include tablet__tables-buttons;
+      width: auto;
+    }
+  }
+  &__button:hover {
+   
+    background-color: $primary-color-geader-row;
+    color: $primary-color-black;
   }
 }

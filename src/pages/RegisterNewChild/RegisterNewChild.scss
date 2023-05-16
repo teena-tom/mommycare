@@ -4,6 +4,9 @@
 .register-newchild {
   text-align: left;
   padding-top: 0.5rem;
+  @include desktop{
+    max-height: 70vh;
+  }
 
   &__header {
     text-align: left;
@@ -216,5 +219,41 @@
 
   &__error-icon {
     width: 1rem;
+  }
+  &__formcontainer{
+    display:flex;
+    flex-direction: row;
+
+    
+  }
+  &__formsection{
+    display: flex;
+    @include tablet{
+      width: 50%;
+    }
+  }
+  &__imagesection{
+    visibility: hidden;
+    @include tablet{
+      padding-top: 2rem;
+      width: 50%;
+      display: flex;
+      visibility: visible;
+    }
+  }
+  &__image{
+    @include tablet{
+      max-width: 30rem;
+      max-height: 30rem;
+    }
+    @include desktop{
+      max-width: 48rem;
+      max-height: 48rem;
+    }
+  }
+  &__image:hover{
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transform: scale(1.1);
   }
 }
