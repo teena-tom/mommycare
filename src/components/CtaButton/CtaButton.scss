@@ -18,33 +18,33 @@
 
   &--primary {
     color: colors.$primary-color-white;
-    background-color: colors.$primary-button-bgcolor;
+    background-color: colors.$hover-edit-button;
     border: none;
 
     &:hover {
-      background-color: colors.$primary-color-black;
+      background-color: colors.$primary-edit-button;
     }
   }
 
   &--secondary {
     color: colors.$primary-color-white;
-    background-color: colors.$primary-button-bgcolor;
-    border: 1px solid colors.$primary-color-btn;
+    background-color: colors.$hover-edit-button;
+    border: 1px solid colors.$hover-edit-button;
 
     &:hover {
       color: colors.$primary-color-white;
-      border-color: colors.$primary-color-btn;
-      background-color: colors.$primary-color-btn;
+      border-color: colors.$primary-edit-button;
+      background-color: colors.$primary-edit-button;
     }
   }
 
   &--delete {
-    color: colors.$colir-temp;
-    background-color: colors.$colir-temp;
+    color: colors.$primary-color-white;
+    background-color: colors.$hover-edit-button;
     border: none;
 
     &:hover {
-      background-color: colors.$primary-color-black;
+      background-color: colors.$primary-edit-button;
     }
   }
 }

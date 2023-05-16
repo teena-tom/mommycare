@@ -1,8 +1,6 @@
 import "./DaycareRow.scss";
 import { Link, useNavigate } from "react-router-dom";
-// import chevronRightIcon from "../../assets/icons/chevron_right-24px.svg";
 import deleteIcon from "../../assets/icons/delete_outline-24px.svg";
-import editIcon from "../../assets/icons/edit-24px.svg";
 
 function DaycareRow({
   id,
@@ -14,8 +12,7 @@ function DaycareRow({
   contactPhone,
   contactPosition,
   daycare_name,
- 
-  // contact_phone,
+
   onDelete,
   onEdit,
 }) {
@@ -25,11 +22,7 @@ function DaycareRow({
         <h4 className="daycare-row__cell-header">DAYCARE</h4>
         <Link className="daycare-row__link" to={`/${id}`}>
           {name}
-          {/* <img
-            className="daycare-row__icon"
-            // src={chevronRightIcon}
-            alt="open"
-          /> */}
+          
         </Link>
       </div>
       <div className="daycare-row__col daycare-row__col--contact-name">
@@ -66,9 +59,7 @@ function DaycareRow({
         <button className="daycare-row__icon-button" onClick={onDelete}>
           <img className="daycare-row__icon" src={deleteIcon} alt="delete" />
         </button>
-        {/* <Link className="daycare-row__link" to={`/${id}/edit`}>
-          <img className="daycare-row__icon" src={editIcon} alt="edit" />
-        </Link> */}
+        
       </div>
     </div>
   );

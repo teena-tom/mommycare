@@ -1,8 +1,8 @@
 import "./Footer.scss";
 import { Link } from "react-router-dom";
-import fb from './../../assets/icons/icon-facebook.png';
-import insta from './../../assets/icons/icon-instagram.png';
-import twittr from './../../assets/icons/icon-twitter.png';
+import fb from './../../assets/icons/Facebook-Icon.svg';
+import insta from './../../assets/icons/Instagram-Icon.svg';
+import yelp from './../../assets/icons/Yelp-Icon.svg';
 
 function Footer() {
   return (
@@ -28,9 +28,9 @@ function Footer() {
         /></Link>
         </div>
             <div className="footer__left-social">
-        <Link  to="https://www.twitter.com/"
+        <Link  to="https://www.yelp.com/"
           ><img className="footer__social"
-          src={twittr} alt="Twitter"
+          src={yelp} alt="Twitter"
         /></Link>
         </div>
         </div>

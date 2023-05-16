@@ -72,7 +72,7 @@ function ChildrenDetails({ daycareId = null }) {
           <div className="childrenDetails__header-child childrenDetails__header-child--contact_phone">
             CONTACT PHONE{" "}
           </div>
-          <div className="inventory-list__header-item">ACTIONS</div>
+          <div className="childrenDetails__header-item">ACTIONS</div>
         </div>
         <div className="childrenDetails__body">
           <div className="childrenDetails__row">

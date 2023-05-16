@@ -45,14 +45,13 @@ function DaycareDetailsPage({ mode = "view" }) {
       <div className="daycare-details__header">
         <Link to="/" className="daycare-details__arrow">
           <img
-            //onClick={() => navigate(-1)} * for later useNavigate *
+            // onClick={() => navigate(-1)} //* for later useNavigate *
             src={backArrow}
             alt="back arrow"
             className="daycare-details__arrow-image"
           />
         </Link>
-        {(mode === "view" && daycare !== null ) && <h1 className="daycare-details__title">{daycare.daycare_name}</h1>}
-        {/* {mode === "edit" && (item!=null ? <EditInventoryItem item={item}/> : <h2>Loading...</h2>)} */}
+        {(mode === "view" && daycare !== null ) && <h1 className="daycare-details__title">{daycare.daycare_name}</h1>}       
         {(mode === "edit" && daycare !== null ) && <h1 className="daycare-details__title">Edit Daycare</h1>}
 
 
@@ -79,7 +78,7 @@ function DaycareDetailsPage({ mode = "view" }) {
                               contactEmail={daycare.contact_email}
                               position={daycare.contact_position} />} 
       {mode === 'view' && <ChildrenDetails daycareId={id}/>}
-      {/* {mode === "edit" && (daycare !== null ? <EditDaycare onDaycareUpdated ={daycareUpdateHandler} daycare={daycare}/> : <h2>Loading...</h2>)} */}
+      
     </section>
 
   );

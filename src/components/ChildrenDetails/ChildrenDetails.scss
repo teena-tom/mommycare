@@ -17,7 +17,7 @@
 
   &__header-row {
     display: none;
-    color: yellowgreen;
+    color: colors.$primary-color-black;
     background-color: colors.$primary-color-geader-row;
 
     @include tablet__table-header;

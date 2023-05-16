@@ -32,15 +32,15 @@ function ChildDetailsPage() {
     <main className="child-details-page">
       <div className="child-details-page__header">
         <h1 className="child-details-page__title">
-        <Link to={`/children`}> <button className="child-details-page__back-button" 
-        // onClick={()=>navigate(-1)}
+         <button className="child-details-page__back-button" 
+        onClick={()=>navigate(-1)}
         >
             <img
               className="child-details-page__back-icon"
               src={backArrow}
               alt="back"
             />
-          </button></Link> 
+          </button>
           {child.child_name}
         </h1>
         <Link to={`/children/${id}/edit`}> <button className="child-details-page__edit-button">

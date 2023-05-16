@@ -12,7 +12,7 @@ function EditChild() {
     const [values, setValues] = useState(null);
     const [daycares, setDaycares] = useState(null);
     
-    // { childName: child.child_name, address: child.address, city: child.city, guadian_name: child.guadian_name, daycare: child.daycares_id, contact_phone:child.contact_phone, contact_email: child.contact_email,  username: child.username, password: child.password}
+    
 
 
     //Onload get daycares 
@@ -112,9 +112,10 @@ function EditChild() {
 
                     
                 </div>
+                {/* <div className='edit-child__imagecontainer'></div> */}
             </div>
            
-            <div className="edit-inventory-item__actions">
+            <div className="edit-child__actions">
                 <CtaButton type="secondary" onClick={handleCancel}>Cancel</CtaButton>
                 <CtaButton onClick={handleSave}>Save</CtaButton>
             </div>

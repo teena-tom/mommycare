@@ -1,10 +1,9 @@
 @use "./../../styles/partials/colors";
 @use "./../../styles/partials/mixins" as *;
 
-
 .register-newchild {
-    text-align: left;
-    padding-top: 0.5rem;
+  text-align: left;
+  padding-top: 0.5rem;
 
   &__header {
     text-align: left;
@@ -35,20 +34,20 @@
     margin-right: 0.5rem;
   }
 
-    text-align: left;
+  text-align: left;
 
-    padding-top: 0.5rem;
-  
-    &__header {
-      padding: 1.5rem 1rem 1rem;
-      display: flex;
-      gap: 1rem;
-      border-bottom: 1px solid colors.$colir-temp;
-      background-color: colors.$primary-color-registration-newchild-toolbar;
-      @include tablet {
-        padding: 1.5rem 2.25rem 1.5rem;
-      }
+  padding-top: 0.5rem;
+
+  &__header {
+    padding: 1.5rem 1rem 1rem;
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid colors.$colir-temp;
+    background-color: colors.$primary-color-registration-newchild-toolbar;
+    @include tablet {
+      padding: 1.5rem 2.25rem 1.5rem;
     }
+  }
   padding: 1rem 0 0;
 
   @include tablet {
@@ -81,13 +80,10 @@
 
     @include tablet {
       border-bottom: none;
-      // border-right: 1px solid colors.$colir-temp;
       padding: 1rem 2.25rem;
       width: 50%;
     }
   }
-
-
 
   &__label {
     @include mobile__tables-buttons;
@@ -112,7 +108,7 @@
       outline: none;
     }
 
-    &--error{
+    &--error {
       border-color: colors.$colir-temp;
     }
 
@@ -130,7 +126,7 @@
         color: colors.$colir-temp;
       }
     }
-    
+
     &--select {
       appearance: none;
       background-image: url("../../assets/icons/arrow_drop_down-24px.svg");
@@ -148,13 +144,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    
   }
 
   &__radio-group {
     display: flex;
     width: 100%;
-    // padding-bottom: 1rem;
   }
 
   &__radio-label {
@@ -200,7 +194,6 @@
         background-color: colors.$primary-registerpage-button-onhover;
       }
     }
-  
 
     &--secondary {
       color: colors.$slide-show-backgorund;
@@ -214,23 +207,14 @@
     }
   }
 
-  &__error-label{
+  &__error-label {
     color: colors.$colir-temp;
     display: flex;
     gap: 0.25rem;
     padding: 0.25rem 0;
   }
 
-  &__error-icon{
+  &__error-icon {
     width: 1rem;
   }
 }
-
-
-
-  
-  
-  
-  
-  
-  

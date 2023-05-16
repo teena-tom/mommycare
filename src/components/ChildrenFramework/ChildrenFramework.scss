@@ -13,11 +13,10 @@
   gap: 1rem;
 
   @include tablet {
-    // padding: 1rem 2rem;
     flex-wrap: nowrap;
-     text-align: left;
+    text-align: left;
     justify-content: space-around;
-     @include tablet__body-large;
+    @include tablet__body-large;
     gap: 0;
   }
 
@@ -30,7 +29,10 @@
   }
 
   &:hover {
-    background-color: adjust-color($color: colors.$primary-registerpage-button-onhover, $alpha: -0.93);
+    background-color: adjust-color(
+      $color: colors.$primary-registerpage-button-onhover,
+      $alpha: -0.93
+    );
   }
   &__address {
     display: block;
@@ -49,18 +51,18 @@
       order: -2;
     }
     &--address {
-        order: -2;
+      order: -2;
     }
     &--contact_email {
-        order: -2;
+      order: -2;
     }
     &--guadian_name {
-        order: -2;
+      order: -2;
     }
     &--contact_phone {
-        order: -2;
+      order: -2;
     }
-    &--actions{
+    &--actions {
       order: -2;
     }
   }
@@ -82,5 +84,4 @@
       text-decoration: underline;
     }
   }
-
 }

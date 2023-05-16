@@ -29,25 +29,15 @@
   }
 
   &__details-container {
-    border-bottom: 1px solid colors.$colir-temp;
+    border-bottom: 1px solid colors.$primary-color-white;
     padding: 1rem;
 
     @include tablet {
       border-bottom: none;
-      border-right: 1px solid colors.$colir-temp;
       padding: 1rem 2.25rem;
-      width: 50%;
+      width: 70%;
     }
   }
-
-//   &__availability-container {
-//     padding: 1rem;
-
-//     @include tablet {
-//       padding: 1rem 2.25rem;
-//       width: 50%;
-//     }
-//   }
 
   &__label {
     @include mobile__tables-buttons;
@@ -61,14 +51,14 @@
 
   &__input {
     font-family: "Sen";
-    border: 1px solid colors.$colir-temp;
+    border: 1px solid colors.$secondary-color-cloud;
     border-radius: 1.5rem;
     padding: 0.5rem 1rem;
     width: 100%;
     min-height: 1.5rem;
 
     &:focus {
-      border-color: colors.$colir-temp;
+      border-color: colors.$active-button-color;
       outline: none;
     }
 
@@ -77,37 +67,10 @@
       min-height: 6rem;
     }
 
-    // &--radio {
-    //   margin-right: 0.5rem;
-    //   vertical-align: bottom;
-    //   width: 1rem;
-
-    //   // &[checked] + label {
-    //   //   color: colors.$secondary-color-cloud;
-    //   // }
-    // }
-
-    &:invalid{
-      border-color: red;
+    &:invalid {
+      border-color: colors.$primary-registerpage-button-onhover;
     }
-
-    // &--select {
-    //   appearance: none;
-    //   background-image: url("../../assets/Icons/arrow_drop_down-24px.svg");
-    //   background-repeat: no-repeat;
-    //   background-position: right 0.5rem bottom 50%;
-
-    //   @include tablet {
-    //     padding: 0.5rem 1rem;
-    //   }
-    }
-
-    // &[type="number"]{
-    //   @include desktop{
-    //     max-width: 8rem;
-    //   }
-    // }
-//   }
+  }
 
   &__form-group {
     padding-top: 1rem;
@@ -155,23 +118,23 @@
     }
 
     &--primary {
-      color: colors.$colir-temp;
-      background-color: colors.$colir-temp;
+      color: colors.$primary-color-white;
+      background-color: colors.$hover-edit-button;
       border: none;
 
       &:hover {
-        background-color: colors.$primary-color-black;
+        background-color: colors.$primary-edit-button;
       }
     }
 
     &--secondary {
-      color: colors.$colir-temp;
-      background-color: colors.$colir-temp;
-      border: 1px solid colors.$colir-temp;
+      color: colors.$primary-color-white;
+      background-color: colors.$hover-edit-button;
+      border: 1px solid colors.$hover-edit-button;
 
       &:hover {
-        color: colors.$colir-temp;
-        border-color: colors.$colir-temp;
+        color: colors.$primary-edit-button;
+        border-color: colors.$primary-edit-button;
       }
     }
   }

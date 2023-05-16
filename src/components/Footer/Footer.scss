@@ -1,4 +1,4 @@
-@use "./../../styles/partials/colors" ;
+@use "./../../styles/partials/colors";
 @use "./../../styles/partials/mixins" as *;
 @use "./../../styles/partials/typography" as *;
 
@@ -12,22 +12,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // margin-top: auto;
-  color: colors.$primary-color-white;
+  color: colors.$primary-text-color-header;
   background-color: colors.$footer-bg-color;
   position: fixed;
   bottom: 0;
   left: 0;
   padding-top: 1rem;
   @include tablet {
-   margin: 0 32px 0 32px;
+    margin: 0 32px 0 32px;
     width: calc(100% - 64px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   @include desktop {
-    margin:0 24px 0 24px;
+    margin: 0 24px 0 24px;
     width: calc(100% - 48px);
     display: flex;
     flex-direction: row;
@@ -39,7 +38,7 @@
       @include tablet__body-small;
     }
   }
-  &__left{
+  &__left {
     display: flex;
     flex-direction: column;
   }
@@ -47,45 +46,39 @@
     display: flex;
     flex-direction: row;
   }
-    
+
   &__social {
     padding: 0 2rem;
     margin: 0 rem;
     width: 15px;
     height: 15px;
-    
- 
   }
-  &__left-social{
+  &__left-social {
     display: flex;
     border-width: 2rem;
-    margin:0 1rem;
+    margin: 0 1rem;
     width: 2em;
     height: 2rem;
     align-items: center;
     justify-content: center;
     border-color: colors.$primary-text-color-header;
     border-radius: 4px;
-    background-color: colors.$primary-header-color-dim_grey;
+    background-color: colors.$primary-color-white;
     opacity: 1;
   }
-  &__left-social:hover{
-    transition-duration: .3s;
+  &__left-social:hover {
+    transition-duration: 0.3s;
     transition-property: transform;
-  transform: scale(1.1);
-  background-color: colors.$active-button-color;
-  opacity: .9;
+    transform: scale(1.1);
+    background-color: colors.$primary-header-color-dim_grey;
+    opacity: 0.9;
     color: #fff;
-  
-     
-
   }
   &__right {
     display: flex;
     text-align: left;
   }
-  &__jointext{
+  &__jointext {
     padding: 0 2rem;
-    
   }
 }
