@@ -17,30 +17,27 @@ function DaycareDetailsPage({ mode = "view" }) {
 
   // TEMP
 
-
   const [daycare, setDaycare] = useState(null);
-
 
   useEffect(() => {
     if (daycare === null) {
       axios
         .get(`${baseUrl}/daycares/${id}`)
-        .then(response => {
+        .then((response) => {
           setDaycare(response.data);
         })
-        .catch(error => {
+        .catch((error) => {
           alert(error);
           console.error(error);
         });
     }
-  }, [id, daycare]); 
+  }, [id, daycare]);
 
   const daycareUpdateHandler = () => {
     setDaycare(null);
-  }
+  };
 
   return (
-
     <section className="daycare-details">
       <div className="daycare-details__header">
         <Link to="/" className="daycare-details__arrow">
@@ -51,36 +48,25 @@ function DaycareDetailsPage({ mode = "view" }) {
             className="daycare-details__arrow-image"
           />
         </Link>
-        {(mode === "view" && daycare !== null ) && <h1 className="daycare-details__title">{daycare.daycare_name}</h1>}       
-        {(mode === "edit" && daycare !== null ) && <h1 className="daycare-details__title">Edit Daycare</h1>}
-
-
-        {mode === "view" &&
-          <Link to={`/${id}/edit`} className="daycare-details__edit">
-          <CtaButton>
-            <img
-              src={edit}
-              alt="pencil"
-              className="daycare-details__edit-img"
-            />
-            <span className="daycare-details__edit-text">Edit</span>
-          </CtaButton>
-        </Link>}
+        {mode === "view" && daycare !== null && (
+          <h1 className="daycare-details__title">{daycare.daycare_name}</h1>
+        )}
       </div>
-      
-      {(mode === "view" && daycare !== null ) && <DaycareDetails 
-                              daycareName={daycare.daycare_name}
-                              address={daycare.address} 
-                              city={daycare.city} 
-                              limit={daycare.max_limit_of_children} 
-                              contactName={daycare.contact_name} 
-                              contactPhone={daycare.contact_phone}
-                              contactEmail={daycare.contact_email}
-                              position={daycare.contact_position} />} 
-      {mode === 'view' && <ChildrenDetails daycareId={id}/>}
-      
-    </section>
 
+      {mode === "view" && daycare !== null && (
+        <DaycareDetails
+          daycareName={daycare.daycare_name}
+          address={daycare.address}
+          city={daycare.city}
+          contactName={daycare.contact_name}
+          position={daycare.contact_position}
+          contactPhone={daycare.contact_phone}
+          contactEmail={daycare.contact_email}
+          
+        />
+      )}
+      {mode === "view" && <ChildrenDetails daycareId={id} />}
+    </section>
   );
-};
+}
 export default DaycareDetailsPage;
